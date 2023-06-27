@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One stop - for all your needs - Contact us</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: rgb(220, 193, 220);
+      }
+      p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #2874f0;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+      }
+      header nav ul {
+        display: flex;
+        list-style: none;
+      }
+      header nav ul li {
+        margin-right: 20px;
+      }
+      header nav ul li a {
+        text-decoration: none;
+        /* color: #666; */
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      header nav ul li a:hover {
+        color: #333;
+      }
+      header nav ul .li1 {
+        text-decoration: underline;
+      }
+      header form {
+        display: flex;
+        margin-right: 1vw;
+      }
+      header form button[type="submit"]:hover {
+        background-color: #666;
+      }
+      a {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #ff0000;
+        border-radius: 2px;
+      }
+      #contact {
+        position: relative;
+      }
+      #contact::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+        background: url("img/contact.jpg") no-repeat center center/cover;
+      }
+      #contact-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 34px;
+      }
+      #contact-box input,
+      #contact-box textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 9px;
+        font-size: 1.1rem;
+      }
+      #contact-box form {
+        width: 40%;
+      }
+      #contact-box label {
+        font-size: 1.3rem;
+        font-family: "Bree Serif", serif;
+      }
+      footer {
+        width: 100%;
+        height: 50px;
+        background-color: #333;
+        display: flex;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+      }
+      .h-primary {
+        font-family: "Bree Serif", serif;
+        font-size: 3.8rem;
+        padding: 12px;
+      }
+      .h-secondary {
+        font-family: "Bree Serif", serif;
+        font-size: 2.3rem;
+        padding: 12px;
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        margin-top: 5vh;
+        margin-left: 13vw;
+        margin-bottom: 80px;
+        padding: 20px 100px;
+        font-size: xx-large;
+        cursor: pointer;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li class="li1"><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="contact">
+      <h1 class="h-primary center">Contact Us</h1>
+      <div id="contact-box">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+            />
+          </div>
+          <br /><br />
+          <div class="form-group">
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="name"
+              id="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <br /><br />
+          <div class="form-group">
+            <label for="phone">Phone Number: </label>
+            <input
+              type="phone"
+              name="name"
+              id="phone"
+              placeholder="Enter your phone"
+            />
+          </div>
+          <br /><br />
+          <div class="form-group">
+            <label for="message">Message: </label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button class="btn"><a href="#">Submit</a></button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>Copyright 2023 One stop - for all your needs</p>
+    </footer>
+  </body>
+</html>

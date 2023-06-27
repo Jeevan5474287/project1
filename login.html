@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One stop - for all your needs - Login</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: rgb(220, 193, 220);
+      }
+      p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #2874f0;
+        border-bottom: 1px solid #ddd;
+        padding: 20px;
+      }
+      header nav ul {
+        display: flex;
+        list-style: none;
+      }
+      header nav ul li {
+        margin-right: 20px;
+      }
+      header nav ul li a {
+        text-decoration: none;
+        /* color: #666; */
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+      header nav ul li a:hover {
+        color: #333;
+      }
+      header nav ul .li1 {
+        text-decoration: underline;
+      }
+      header form {
+        display: flex;
+        margin-right: 1vw;
+      }
+      header form button[type="submit"]:hover {
+        background-color: #666;
+      }
+      footer {
+        width: 100%;
+        height: 50px;
+        background-color: #333;
+        display: flex;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 14px;
+      }
+      a {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        color: whitesmoke;
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #ff0000;
+        border-radius: 2px;
+      }
+      .login-container,
+      .signup-container {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+      }
+      .main {
+        margin-top: 10vh;
+      }
+      .main a {
+        color: #007bff;
+      }
+      .main h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .main form {
+        display: flex;
+        flex-direction: column;
+      }
+      .main label {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+      .main input[type="text"],
+      .main input[type="email"],
+      .main input[type="password"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 20px;
+      }
+      .main button[type="submit"] {
+        background-color: #0095d9;
+        border: none;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .main button[type="submit"]:hover {
+        background-color: #007bff;
+      }
+      .main p {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li class="li1"><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="login-container">
+        <h1>E-Commerce Login</h1>
+        <form action="/login" method="post">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+          <br />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <br />
+          <button type="submit">Log In</button>
+        </form>
+        <p>
+          Don't have an account? <a href="#" id="show-signup">Sign up here</a>
+        </p>
+      </div>
+      <div class="signup-container" style="display: none">
+        <h1>E-Commerce Signup</h1>
+        <form action="/signup" method="post">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+          <br />
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          <br />
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          <br />
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            required
+          />
+          <br />
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>
+          Already have an account? <a href="#" id="show-login">Log in here</a>
+        </p>
+      </div>
+    </div>
+    <script>
+      const loginContainer = document.querySelector(".login-container");
+      const signupContainer = document.querySelector(".signup-container");
+      const showSignupLink = document.querySelector("#show-signup");
+      const showLoginLink = document.querySelector("#show-login");
+      showSignupLink.addEventListener("click", () => {
+        loginContainer.style.display = "none";
+        signupContainer.style.display = "block";
+      });
+      showLoginLink.addEventListener("click", () => {
+        signupContainer.style.display = "none";
+        loginContainer.style.display = "block";
+      });
+    </script>
+    <footer>
+      <p>Copyright 2023 One stop - for all your needs</p>
+    </footer>
+  </body>
+</html>

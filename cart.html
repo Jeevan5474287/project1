@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>One stop - for all your needs - Shopping Cart</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li class="li1"><a href="cart.html">Cart</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="cart">
+        <h1>Shopping Cart</h1>
+        <table>
+          <thead>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Item 1</td>
+              <td>Rs1110</td>
+              <td>
+                <input type="number" value="2" />
+                <button>Update</button>
+                <button>Remove</button>
+              </td>
+              <td>Rs2220</td>
+            </tr>
+            <tr>
+              <td>Item 2</td>
+              <td>Rs7820</td>
+              <td>
+                <input type="number" value="1" />
+                <button>Update</button>
+                <button>Remove</button>
+              </td>
+              <td>Rs3320</td>
+            </tr>
+            <tr>
+              <td>Item 3</td>
+              <td>Rs76620</td>
+              <td>
+                <input type="number" value="1" />
+                <button>Update</button>
+                <button>Remove</button>
+              </td>
+              <td>Rs3320</td>
+            </tr>
+            <tr>
+              <td>Item 4</td>
+              <td>Rs5820</td>
+              <td>
+                <input type="number" value="1" />
+                <button>Update</button>
+                <button>Remove</button>
+              </td>
+              <td>Rs3320</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Total:</td>
+              <td>Rs99999</td>
+            </tr>
+          </tfoot>
+        </table>
+        <br /><br /><br />
+        <button id="order" type="submit">
+          <a href="confirmation.html">Place order</a>
+        </button>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright 2023 One stop - for all your needs</p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
